@@ -1,0 +1,14 @@
+<script>
+    document.getElementById('proxyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const url = document.getElementById('urlInput').value;
+        const doh = document.getElementById('dohSelect').value;
+        // Atualizado para chamar a rota da API da Vercel
+        window.location.href = `/api/proxy?doh=${doh}&url=${encodeURIComponent(url)}`;
+    });
+
+    function quickNav(url) {
+        document.getElementById('urlInput').value = url;
+        document.getElementById('proxyForm').dispatchEvent(new Event('submit'));
+    }
+</script>
