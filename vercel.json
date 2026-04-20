@@ -6,7 +6,8 @@
       "destination": "/public/$1"
     }
   ]
-}{
+}
+{
   "version": 2,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/proxy.js" }
